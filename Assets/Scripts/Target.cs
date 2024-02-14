@@ -10,7 +10,7 @@ public class Target : MonoBehaviour
     private float maxSpeed = 16;
     private float maxTorque = 10;
     private float xRange = 4;
-    private float ySpawnPos = -6;
+    private float ySpawnPos = -2;
 
     private GameManager gameManager;
 
@@ -19,7 +19,7 @@ public class Target : MonoBehaviour
     public ParticleSystem explosionParticle;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         targetRb = GetComponent<Rigidbody>();
         targetRb.AddForce(RandomForce(), ForceMode.Impulse);
@@ -41,7 +41,7 @@ public class Target : MonoBehaviour
 
     Vector3 RandomSpawnPos()
     {
-        return new Vector3(Random.Range(-xRange, xRange), ySpawnPos);
+        return new Vector3(Random.Range(-xRange, xRange), ySpawnPos, 0);
     }
 
     private void OnMouseDown()
