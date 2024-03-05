@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 
 {
+    public GameObject titleScreen;
+
     public Button restartButton; 
 
     public bool isGameActive;
@@ -21,6 +23,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     
     private float spawnRate = 1.0f;
+
+    public void StartGame(int difficulty)
+    {
+        isGameActive = true;
+        score = 0;
+        StartCoroutine(SpawnTarget());
+        UpdateScore(0);
+        titleScreen.gameObject.SetActive(false);
+    }
 
     // Start is called before the first frame update
     void Start()
