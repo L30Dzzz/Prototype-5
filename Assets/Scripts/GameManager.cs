@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
         titleScreen.gameObject.SetActive(false);
+        spawnRate /= difficulty;
     }
 
     // Start is called before the first frame update
