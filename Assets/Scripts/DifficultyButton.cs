@@ -26,10 +26,4 @@ public class DifficultyButton : MonoBehaviour
 
         gameManager.StartGame(difficulty);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

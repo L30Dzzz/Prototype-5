@@ -17,6 +17,7 @@ public class VolumeController : MonoBehaviour
         Debug.Log(volumeSlider.value);
     }
 
+    //check volume lvl/val
     void ValueChangeCheck()
     {
         gameAudio.volume = volumeSlider.value;
