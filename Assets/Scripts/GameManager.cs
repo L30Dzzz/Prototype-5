@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 
@@ -18,8 +17,10 @@ public class GameManager : MonoBehaviour
     private int score;
     public TextMeshProUGUI scoreText;
 
-    private int lives;
+    public int lives;
     public TextMeshProUGUI livesText;
+
+    bool pauseGame;
     
     public void StartGame(int difficulty)
     {
@@ -34,10 +35,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isGameActive = true;
         StartCoroutine(SpawnTarget());
         score = 0;
         UpdateScore(0);
-        isGameActive = true;
+        
     }
 
     public void RestartGame()
@@ -68,9 +70,27 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score:" + score;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if(lives == 0)
+        {
+            GameOver();
+        }
         
+        livesText.text = "Lives: " + lives;
+
+         if (Input.GetKeyDown(KeyCode.Space) && isGameActive == true)
+        {
+            pauseGame = !pauseGame;
+
+            if (pauseGame == true)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 0;
+            }
+        }
     }
 }

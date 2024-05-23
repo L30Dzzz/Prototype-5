@@ -11,7 +11,7 @@ public class Target : MonoBehaviour
     private float maxTorque = 10;
     private float xRange = 4;
     private float ySpawnPos = -2;
-
+    
     private GameManager gameManager;
 
     public int pointValue;
@@ -59,7 +59,7 @@ public class Target : MonoBehaviour
         Destroy(gameObject);
         if (!gameObject.CompareTag("Bad"))
         {
-            gameManager.GameOver();
+            gameManager.lives--;
         }
     }
 

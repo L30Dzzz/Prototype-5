@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -729.00903, y: -16.191}
+  m_AnchoredPosition: {x: -729.00903, y: -16.190979}
   m_SizeDelta: {x: 87.98193, y: 32.3821}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &43532780
@@ -1402,7 +1402,8 @@ MonoBehaviour:
   - {fileID: 3871995006404558936, guid: 63a467bd9e1854d1f846627411b97366, type: 3}
   gameOverText: {fileID: 550536453}
   scoreText: {fileID: 1213757552}
-  livesText: {fileID: 0}
+  lives: 3
+  livesText: {fileID: 43532780}
 --- !u!4 &561161505
 Transform:
   m_ObjectHideFlags: 0
@@ -2134,7 +2135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 43.991, y: -16.191}
+  m_AnchoredPosition: {x: 43.990997, y: -16.190979}
   m_SizeDelta: {x: 87.9819, y: 32.3821}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1213757552
